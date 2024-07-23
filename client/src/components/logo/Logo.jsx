@@ -16,7 +16,7 @@ const Logo = ({ customCss, hideName = false }) => {
             className="w-full h-full"
           />
         </div>
-        {!hideName && <h1 className="font-bold text-xl">Recipen</h1>}
+        {!hideName && <h1 className="font-bold text-xl">Recipe Hub</h1>}
       </div>
     </Link>
   );
