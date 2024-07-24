@@ -2,6 +2,7 @@ import React from "react";
 import { GiKnifeFork } from "react-icons/gi";
 import { Button } from "..";
 import { Link } from "react-router-dom";
+// import { HeroImage } from "../../assets/heroimg.png";
 
 const Hero = () => {
   return (
