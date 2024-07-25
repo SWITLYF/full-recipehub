@@ -46,7 +46,7 @@ const DashboardRecipes = () => {
       align: "left",
       minWidth: 250,
       renderCell: ({ row: { author } }) => {
-        return (
+        return author ? (
           <div className="flex gap-2 items-center">
             <MuiAvatar
               alt={author?.name}
@@ -56,6 +56,8 @@ const DashboardRecipes = () => {
             />
             {author.name}
           </div>
+        ) : (
+          <div>No Author</div>
         );
       },
     },
@@ -89,7 +91,7 @@ const DashboardRecipes = () => {
       renderCell: ({ row: { _id } }) => {
         return (
           <div
-            className="rounded shadow-md w-[40%] text-center cursor-pointer  bg-primaryLight
+            className="rounded shadow-md w-[40%] text-center cursor-pointer bg-primaryLight
             hover:bg-primary text-light py-2"
             onClick={() => handleDelete(_id)}
           >
