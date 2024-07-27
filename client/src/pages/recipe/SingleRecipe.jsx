@@ -177,6 +177,14 @@ const SingleRecipe = () => {
                 className="rounded w-full"
               />
             </div>
+            <div
+              className="basis-1/3 bg-cover bg-center relative"
+              style={{ backgroundImage: `url(${data?.image})`, height: '100%' }}
+              aria-label={data?.title}
+            >
+              {/* Optional content inside the div */}
+            </div>
+
             {/* Recipe details */}
             <div className="basis-2/3 flex flex-col gap-2">
               <div className="flex justify-between">
