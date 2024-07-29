@@ -34,7 +34,7 @@ const SubscribeCard = ({
         <h3 className="font-bold text-xl">{title}</h3>
       </div>
       <p className="text-gray-500 text-sm">{subtitle}</p>
-      <h4 className="font-bold text-3xl my-4">40000NGN</h4>
+      <h4 className="font-bold text-3xl my-4">{price}</h4>
       {link ? (
         <Link
           to={link}

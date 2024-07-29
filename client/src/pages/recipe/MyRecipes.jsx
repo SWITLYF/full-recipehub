@@ -4,12 +4,12 @@ import { useGetRecipesQuery } from "../../features/recipe/recipeApiSlice";
 import useAuth from "../../hooks/useAuth";
 import useTitle from "../../hooks/useTitle";
 
-const index = () => {
+const Index = () => {
   const { data, isLoading } = useGetRecipesQuery();
   const user = useAuth();
   useTitle("Recipen - My Recipes");
 
-  const updatedData = data?.filter((obj) => obj.author._id === user?.userId);
+  const updatedData = data?.filter((obj) => obj.author && obj.author._id === user?.userId);
 
   return (
     <>
@@ -29,4 +29,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;

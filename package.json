@@ -3,6 +3,7 @@
     "axios": "^1.7.2",
     "crypto": "^1.0.1",
     "crypto-js": "^4.2.0",
+    "framer-motion": "^11.3.19",
     "uuid": "^10.0.0"
   }
 }

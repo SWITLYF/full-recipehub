@@ -93,26 +93,31 @@ import axios from "axios";
 import CryptoJS from "crypto-js";
 
 const uploadImage = async (e, setProgress, setFormDetails, formDetails) => {
-  if (
-    e.target.files[0].type === "image/jpeg" ||
-    e.target.files[0].type === "image/png"
-  ) {
+  const file = e.target.files[0];
+
+  if (file && (file.type === "image/jpeg" || file.type === "image/png")) {
     const data = new FormData();
     const timestamp = Math.floor(Date.now() / 1000);
     const cloudName = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
     const apiKey = import.meta.env.VITE_CLOUDINARY_API_KEY;
     const apiSecret = import.meta.env.VITE_CLOUDINARY_API_SECRET;
+    const uploadPreset = import.meta.env.VITE_CLOUDINARY_PRESET;
 
-    data.append("file", e.target.files[0]);
+    data.append("file", file);
     data.append("timestamp", timestamp);
-    data.append("upload_preset", import.meta.env.VITE_CLOUDINARY_PRESET);
+    data.append("upload_preset", uploadPreset);
     data.append("api_key", apiKey);
 
     // Create a unique signature
-    const paramsToSign = `timestamp=${timestamp}&upload_preset=${import.meta.env.VITE_CLOUDINARY_PRESET}`;
+    const paramsToSign = `timestamp=${timestamp}&upload_preset=${uploadPreset}`;
     const signature = CryptoJS.SHA1(paramsToSign + apiSecret).toString(CryptoJS.enc.Hex);
 
     data.append("signature", signature);
+
+    // Log the form data for debugging
+    for (let pair of data.entries()) {
+      console.log(`${pair[0]}: ${pair[1]}`);
+    }
 
     const config = {
       onUploadProgress: (e) => {

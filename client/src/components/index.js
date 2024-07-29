@@ -18,7 +18,7 @@ import Sidebar from "./dashboard/Sidebar";
 import Table from "./dashboard/Table";
 import Avatar from "./avatar/Avatar";
 import ScrollToTop from "./scrollToTop/ScrollToTop";
-import ShareButton from "./shareButton/ShareButton";
+// import ShareButton from "./shareButton/ShareButton";
 import NoData from "./noData/NoData";
 
 export {
@@ -42,6 +42,6 @@ export {
   Table,
   Avatar,
   ScrollToTop,
-  ShareButton,
+  // ShareButton,
   NoData,
 };

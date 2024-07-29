@@ -40,7 +40,7 @@ const Contact = () => {
           <h4 className="font-bold">Visit us</h4>
           <p>Come say hello to our office</p>
           <p className="font-semibold text-sm">
-            Lincoln University College
+            TASTY PLATES.
           </p>
         </div>
         <div className="mb-5 flex flex-col gap-1">
@@ -57,10 +57,10 @@ const Contact = () => {
           <h4 className="font-bold">Call us</h4>
           <p>Mon-Fri from 9am to 6pm</p>
           <a
-            href="tel:+234 00 000 0000"
+            href="tel:+234 906 054 9965"
             className="font-semibold text-sm"
           >
-            +234 00 000 0000
+            +234 906 054 9965
           </a>
         </div>
         <div className="mb-5 flex flex-col gap-3">
@@ -80,14 +80,6 @@ const Contact = () => {
             >
               <a href="https://twitter.com">
                 <AiFillTwitterCircle />
-              </a>
-            </motion.li>
-            <motion.li
-              className="rounded-full hover:text-blue-600"
-              whileHover={{ y: -4 }}
-            >
-              <a href="https://www.linkedin.com">
-                <AiFillLinkedin />
               </a>
             </motion.li>
           </ul>

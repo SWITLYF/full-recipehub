@@ -8,11 +8,11 @@ const Subscribe = () => {
     <section className="box flex flex-col gap-10 mt-28 items-center">
       <div className="flex flex-col gap-2 items-center">
         <h2 className="font-bold text-3xl text-center">
-          Pay once, use forever
+          Pay once, Use forever
         </h2>
         <p className="text-sm text-gray-500 text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          perferendis optio omnis? Id, ipsa eos.
+          Pay and be among our premium user, this will enable you get foreign recipes 
+          from one of our top cuisines
         </p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 w-full md:w-[80%] lg:w-[50%]">
@@ -33,7 +33,7 @@ const Subscribe = () => {
           icon={
             <IoDiamondOutline className="bg-primary text-light rounded-full p-1.5 text-3xl shadow-lg" />
           }
-          price={"₹999"}
+          price={"₦4000"}
           subtitle={"Best for professionals"}
           featureTitle={"Everything in Basic, plus:"}
           features={[
