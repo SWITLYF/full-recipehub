@@ -4,12 +4,21 @@ import {
   FacebookShareButton,
   FacebookIcon,
 } from "react-share";
+import { FaClipboard } from "react-icons/fa";
 
 const ShareButton = ({ url }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(url).then(() => {
+      alert('Recipe URL copied to clipboard!');
+    }, (err) => {
+      console.error('Could not copy recipe URL: ', err);
+    });
   };
 
   return (
@@ -19,10 +28,16 @@ const ShareButton = ({ url }) => {
         onClick={toggleMenu}
       />
       {isMenuOpen && (
-        <div className="absolute -left-2 top-9 max-w-max border rounded shadow-lg z-10 pt-1">
+        <div className="absolute -left-2 top-9 border rounded shadow-lg z-10 pt-1 bg-white flex space-x-2">
           <FacebookShareButton url={url} className="block px-2 py-1">
             <FacebookIcon size={32} round />
           </FacebookShareButton>
+          <div
+            className="block px-2 py-1 cursor-pointer flex items-center"
+            onClick={copyToClipboard}
+          >
+            <FaClipboard size={32} />
+          </div>
         </div>
       )}
     </div>
