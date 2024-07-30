@@ -3,10 +3,6 @@ import { AiOutlineShareAlt } from "react-icons/ai";
 import {
   FacebookShareButton,
   FacebookIcon,
-  LinkedinShareButton,
-  LinkedinIcon,
-  TwitterShareButton,
-  TwitterIcon,
 } from "react-share";
 
 const ShareButton = ({ url }) => {
@@ -23,8 +19,10 @@ const ShareButton = ({ url }) => {
         onClick={toggleMenu}
       />
       {isMenuOpen && (
-        <div className="absolute -left-2 top-9 max-w-max bg-white border rounded shadow-lg z-10 pt-1">
-          
+        <div className="absolute -left-2 top-9 max-w-max border rounded shadow-lg z-10 pt-1">
+          <FacebookShareButton url={url} className="block px-2 py-1">
+            <FacebookIcon size={32} round />
+          </FacebookShareButton>
         </div>
       )}
     </div>

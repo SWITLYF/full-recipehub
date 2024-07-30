@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { Button, Input } from "../../components";
 import { IoMailOutline } from "react-icons/io5";
-import { FaRegPaperPlane } from "react-icons/fa";
+import { 
+  FaRegPaperPlane,
+  FaFacebook,
+  FaInstagramSquare,
+} from "react-icons/fa";
 import {
   AiFillGithub,
   AiFillLinkedin,
@@ -71,7 +75,7 @@ const Contact = () => {
               whileHover={{ y: -4 }}
             >
               <a href="https://github.com">
-                <AiFillGithub />
+              <FaFacebook />
               </a>
             </motion.li>
             <motion.li
@@ -79,7 +83,7 @@ const Contact = () => {
               whileHover={{ y: -4 }}
             >
               <a href="https://twitter.com">
-                <AiFillTwitterCircle />
+                < FaInstagramSquare />
               </a>
             </motion.li>
           </ul>
